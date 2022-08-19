@@ -14,14 +14,14 @@ const Main = () => {
   };
 
   //Función para actualizar el DOM
-  const updateDom = (productId) => {
-    setAutor(autor.filter((autor) => autor._id !== productId));
+  const updateDom = (autorId) => {
+    setAutor(autor.filter((autor) => autor._id !== autorId));
   };
 
   //Método para obtener y cargar información
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/autores")
+      .get("http://localhost:5000/api/autor")
       .then((res) => setAutor(res.data));
     setLoaded(true);
   }, []);
