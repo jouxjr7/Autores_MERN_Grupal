@@ -42,9 +42,9 @@ const Lista = (props) => {
             return (
               <tr key={idx + 2}>
                 <td key={idx}>
-                  <p className='lst' key={idx}>
-                    <Link to={"/" + autor._id}>{autor.nameAutor}</Link>
-                  </p>
+                  <div className='lst' key={idx}>
+                    {autor.nameAutor}
+                  </div>
                 </td>
                 <td>
                   <button
@@ -54,13 +54,15 @@ const Lista = (props) => {
                   >
                     Eliminar
                   </button>
+
+                  <Link to={"/edit/"+autor._id} >
                   <button
                     key={idx + 1}
-                    className='btnUpdate'
-                    onClick={(e) => updateAutor(autor._id)}
+                    className='btnUpdate'  
                   >
                     Editar
                   </button>
+                  </Link>
                 </td>
               </tr>
             );

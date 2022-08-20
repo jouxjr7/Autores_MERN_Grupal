@@ -1,5 +1,6 @@
 //Importación de librerías requeridas
 import React from "react";
+import {Link} from 'react-router-dom'
 import axios from "axios";
 import { useState } from "react";
 
@@ -12,9 +13,8 @@ const Autores = (props) => {
   return (
     <div>
       <h1>Autores Favoritos</h1>
-
       <br />
-      <input className='btn' type='submit' value='Crear Autor' />
+      <Link to={"/new"} >Create Autor</Link> 
     </div>
   );
 };
